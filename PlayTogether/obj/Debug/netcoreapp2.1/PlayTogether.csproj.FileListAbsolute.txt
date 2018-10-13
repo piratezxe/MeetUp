@@ -1,0 +1,3 @@
+C:\Users\rusek\source\repos\PlayTogether\PlayTogether\obj\Debug\netcoreapp2.1\PlayTogether.csproj.CoreCompileInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PlayTogether\obj\Debug\netcoreapp2.1\PlayTogether.AssemblyInfoInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PlayTogether\obj\Debug\netcoreapp2.1\PlayTogether.AssemblyInfo.cs

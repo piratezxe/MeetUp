@@ -1,0 +1,12 @@
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Infrastructure.deps.json
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Infrastructure.dll
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Infrastructure.pdb
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Core.dll
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Core.pdb
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.csprojAssemblyReference.cache
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.AssemblyInfo.cs
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.csproj.CopyComplete
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.dll
+C:\Users\rusek\source\repos\PlayTogether\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.pdb
