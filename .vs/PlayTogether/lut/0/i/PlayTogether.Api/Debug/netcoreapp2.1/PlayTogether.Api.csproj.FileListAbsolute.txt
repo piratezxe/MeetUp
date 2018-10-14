@@ -1,0 +1,13 @@
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.deps.json
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.runtimeconfig.json
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.runtimeconfig.dev.json
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.dll
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.csprojAssemblyReference.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.csproj.CoreCompileInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.RazorAssemblyInfo.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.RazorAssemblyInfo.cs
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.AssemblyInfoInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.AssemblyInfo.cs
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.RazorTargetAssemblyInfo.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.csproj.CopyComplete
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Api\Debug\netcoreapp2.1\PlayTogether.Api.dll

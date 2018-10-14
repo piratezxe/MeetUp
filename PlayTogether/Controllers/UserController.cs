@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using PlayTogether.Api.Base;
 using PlayTogether.Core.Domains;
+using PlayTogether.Infrastructure.Commands;
 using PlayTogether.Infrastructure.Commands.User;
 using PlayTogether.Infrastructure.Dto;
 using PlayTogether.Infrastructure.Services.UserServices;
 
 namespace PlayTogether.Controllers
 {
-    [Route("[controller]/[action]")]
-    public class UserController : Controller
+    public class UserController : ApiControllerBase
     {
         private readonly IUserService _userContext;
 
-        public UserController(IUserService UserContext)
+        public UserController(IUserService UserContext, ICommandDispatcher _dispatcher)
+            : base(_dispatcher)
         {
             _userContext = UserContext;
         }
@@ -42,7 +44,7 @@ namespace PlayTogether.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] CreateUsers user)
         {
-            await _userContext.RegisterUserAsync(user.Email, user.Password, user.UserName);
+            await _commandDispatcher.DispatchAsync(user);
             return Created($"User/{user.Email}", null);
         }
     }

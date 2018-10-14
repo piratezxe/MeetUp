@@ -182,11 +182,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\Core\\PlayTogether.Core.csproj",
+      "projectUniqueName": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\Core\\PlayTogether.Core.csproj",
       "projectName": "PlayTogether.Core",
-      "projectPath": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\Core\\PlayTogether.Core.csproj",
+      "projectPath": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\Core\\PlayTogether.Core.csproj",
       "packagesPath": "C:\\Users\\rusek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\Core\\obj\\",
+      "outputPath": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

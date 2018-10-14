@@ -1,0 +1,13 @@
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlatTogether.Tests\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlatTogether.Tests\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlatTogether.Tests\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlatTogether.Tests\Debug\netcoreapp2.1\PlatTogether.Tests.deps.json
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlatTogether.Tests\Debug\netcoreapp2.1\PlatTogether.Tests.runtimeconfig.json
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlatTogether.Tests\Debug\netcoreapp2.1\PlatTogether.Tests.runtimeconfig.dev.json
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlatTogether.Tests\Debug\netcoreapp2.1\PlatTogether.Tests.dll
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlatTogether.Tests\Debug\netcoreapp2.1\PlatTogether.Tests.csproj.CoreCompileInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlatTogether.Tests\Debug\netcoreapp2.1\PlatTogether.Tests.AssemblyInfoInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlatTogether.Tests\Debug\netcoreapp2.1\PlatTogether.Tests.AssemblyInfo.cs
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlatTogether.Tests\Debug\netcoreapp2.1\PlatTogether.Tests.csproj.CopyComplete
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlatTogether.Tests\Debug\netcoreapp2.1\PlatTogether.Tests.dll
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlatTogether.Tests\Debug\netcoreapp2.1\PlatTogether.Tests.csprojAssemblyReference.cache

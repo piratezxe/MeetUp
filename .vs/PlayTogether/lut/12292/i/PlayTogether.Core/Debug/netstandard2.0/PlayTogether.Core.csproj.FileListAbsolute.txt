@@ -1,0 +1,8 @@
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlayTogether.Core\Debug\netstandard2.0\PlayTogether.Core.deps.json
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlayTogether.Core\Debug\netstandard2.0\PlayTogether.Core.dll
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Core\Debug\netstandard2.0\PlayTogether.Core.csprojAssemblyReference.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Core\Debug\netstandard2.0\PlayTogether.Core.csproj.CoreCompileInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Core\Debug\netstandard2.0\PlayTogether.Core.AssemblyInfoInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Core\Debug\netstandard2.0\PlayTogether.Core.AssemblyInfo.cs
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Core\Debug\netstandard2.0\PlayTogether.Core.csproj.CopyComplete
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Core\Debug\netstandard2.0\PlayTogether.Core.dll

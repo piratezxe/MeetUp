@@ -12,3 +12,7 @@ C:\Users\rusek\source\repos\PlayTogether\PlayTogether.Test\obj\Debug\netstandard
 C:\Users\rusek\source\repos\PlayTogether\PlayTogether.Test\bin\Debug\netstandard2.0\PlayTogether.Test.pdb
 C:\Users\rusek\source\repos\PlayTogether\PlayTogether.Test\obj\Debug\netstandard2.0\PlayTogether.Test.dll
 C:\Users\rusek\source\repos\PlayTogether\PlayTogether.Test\obj\Debug\netstandard2.0\PlayTogether.Test.pdb
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.Test\obj\Debug\netstandard2.0\PlayTogether.Test.csprojAssemblyReference.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.Test\obj\Debug\netstandard2.0\PlayTogether.Test.csproj.CoreCompileInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.Test\obj\Debug\netstandard2.0\PlayTogether.Test.AssemblyInfoInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.Test\obj\Debug\netstandard2.0\PlayTogether.Test.AssemblyInfo.cs

@@ -2,7 +2,6 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Newtonsoft.Json;
-using PlayTogether.Core.Domains;
 using PlayTogether.Infrastructure.Commands.User;
 using PlayTogether.Infrastructure.Dto;
 using System.Net;

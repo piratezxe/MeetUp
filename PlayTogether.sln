@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayTogether.Infrastructure
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayTogether.TestEndToEnd", "PlayTogether.TestEndToEnd\PlayTogether.TestEndToEnd.csproj", "{7DFAB700-76FA-4550-96D3-AA26B8A0F2C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayTogether.Test", "PlayTogether.Test\PlayTogether.Test.csproj", "{81AD23F9-1782-471A-9D69-33343CC07E7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlatTogether.Tests", "PlatTogether.Tests\PlatTogether.Tests.csproj", "{1E17E108-8B18-4560-B16A-A032483B9174}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{7DFAB700-76FA-4550-96D3-AA26B8A0F2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DFAB700-76FA-4550-96D3-AA26B8A0F2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DFAB700-76FA-4550-96D3-AA26B8A0F2C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81AD23F9-1782-471A-9D69-33343CC07E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81AD23F9-1782-471A-9D69-33343CC07E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81AD23F9-1782-471A-9D69-33343CC07E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81AD23F9-1782-471A-9D69-33343CC07E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E17E108-8B18-4560-B16A-A032483B9174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E17E108-8B18-4560-B16A-A032483B9174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E17E108-8B18-4560-B16A-A032483B9174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E17E108-8B18-4560-B16A-A032483B9174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
