@@ -1,17 +1,18 @@
-﻿using PlayTogether.Infrastructure.Services.UserServices;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 using System.Threading.Tasks;
+using PlayTogether.Infrastructure.Commands;
+using PlayTogether.Infrastructure.Commands.Account;
+using PlayTogether.Infrastructure.Services;
+using PlayTogether.Infrastructure.Services.UserServices;
 
-namespace PlayTogether.Infrastructure.Commands.Account
+namespace PlayTogether.Infrastructure.Handler
 {
     public class ChangeUserPassword : ICommandHandler<ChangePassword>
     {
 
-        public Task HandlerAsync(ChangePassword command)
+        public async Task HandlerAsync(ChangePassword command)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
     }
 }

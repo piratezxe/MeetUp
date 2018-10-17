@@ -14,5 +14,9 @@ namespace PlayTogether.Infrastructure.Services.UserServices
         Task<IEnumerable<User>> GetAllAsync();
 
         Task<UserDto> GetByEmailAsync(string email);
+
+        Task LoginAsync(string password, string email);
+
+        Task ChangePasswordAsync(string currentPassword, string newPassword);
     }
 }

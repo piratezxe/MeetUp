@@ -15,10 +15,12 @@ namespace PlayTogether.Infrastructure.Services.UserServices
 
         private readonly IMapper _mapper;
 
+        private readonly IEncrypter _encrypter;
 
-        public UserService(IUserRepository userRepo, IMapper mapper)
+        public UserService(IUserRepository userRepo, IMapper mapper, IEncrypter encrypter)
         {
             _mapper = mapper;
+            _encrypter = encrypter;
             _user = userRepo;
         }
 
@@ -33,6 +35,27 @@ namespace PlayTogether.Infrastructure.Services.UserServices
             return _mapper.Map<User, UserDto>(user);
         }
 
+        public async Task LoginAsync(string password, string email)
+        {
+            var user = await _user.GetAsyncByEmail(email);
+            if (user == null)
+            {
+                throw new  ArgumentNullException($"User with {email} not exist");
+            }
+
+            var hash = _encrypter.GetHash(user.Salt, password);
+
+            if (user.Password == hash)
+                return;
+
+            throw new ArgumentException($"Password: {password} is invalid");
+        }
+
+        public Task ChangePasswordAsync(string currentPassword, string newPassword)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task RegisterUserAsync(string email, string password, string username)
         {
             var user = await _user.GetAsyncByEmail(email);
@@ -41,8 +64,10 @@ namespace PlayTogether.Infrastructure.Services.UserServices
             {
                 throw new ArgumentException("User already exist");
             }
-            var salt = Guid.NewGuid().ToString("N");
-            user = new User(email, password, salt, username);
+
+            var salt = _encrypter.GetSalt(password);
+            var hash = _encrypter.GetHash(salt, password);
+            user = new User(email, hash, salt, username);
             await _user.AddAsync(user);
         }
     }

@@ -1,0 +1,77 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\PlayTogether.TestEndToEnd\\PlayTogether.TestEndToEnd.csproj",
+    "projectName": "PlayTogether.TestEndToEnd",
+    "projectPath": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\PlayTogether.TestEndToEnd\\PlayTogether.TestEndToEnd.csproj",
+    "outputPath": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\PlayTogether.TestEndToEnd\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.1"
+    ],
+    "frameworks": {
+      "netcoreapp2.1": {
+        "projectReferences": {
+          "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\PlayTogether\\PlayTogether.Api.csproj": {
+            "projectPath": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\PlayTogether\\PlayTogether.Api.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.1": {
+      "dependencies": {
+        "FluentAssertions": {
+          "target": "Package",
+          "version": "[5.4.2, )"
+        },
+        "Microsoft.AspNetCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.1, )",
+          "autoReferenced": true
+        },
+        "Microsoft.AspNetCore.TestHost": {
+          "target": "Package",
+          "version": "[2.1.1, )"
+        },
+        "Microsoft.NET.Test.Sdk": {
+          "target": "Package",
+          "version": "[15.8.0, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
+        },
+        "Newtonsoft.Json": {
+          "target": "Package",
+          "version": "[11.0.2, )"
+        },
+        "xunit": {
+          "target": "Package",
+          "version": "[2.4.0, )"
+        },
+        "xunit.runner.visualstudio": {
+          "target": "Package",
+          "version": "[2.3.1, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

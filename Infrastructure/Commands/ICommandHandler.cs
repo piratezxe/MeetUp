@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PlayTogether.Infrastructure.Commands
 {
-    public interface ICommandHandler<T> where T : ICommands
+    public interface ICommandHandler<in T> where T : ICommands
     {
         Task HandlerAsync(T command);
     }

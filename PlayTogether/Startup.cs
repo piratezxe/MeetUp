@@ -10,7 +10,11 @@ using PlayTogether.Infrastructure.Mapper;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using System;
+using PlayTogether.Infrastructure.Extensions;
 using PlayTogether.Infrastructure.Ioc.Modules;
+using PlayTogether.Infrastructure.Services;
+using PlayTogether.Infrastructure.Services.Jwt;
+using PlayTogether.Infrastructure.Settings;
 
 namespace PlayTogether
 {
@@ -31,13 +35,15 @@ namespace PlayTogether
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, InMemoryUserRepository>();
+            services.AddScoped<IEncrypter, Encrypter>();
+            services.AddScoped<IJwthandler, JwtHandler>();
             services.AddSingleton(AutoMapperConfig.Initialize());
-
+            services.AddOptions();
+            services.AddJwt();
+            services.AddAuthentication();
             var builder = new ContainerBuilder();
-
             //register commandModules 
             builder.RegisterModule<CommandsModules>();
-
             builder.Populate(services);
             ApplicationContainer = builder.Build();
 
@@ -57,6 +63,7 @@ namespace PlayTogether
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseMvc();
             appLifetime.ApplicationStopped.Register(() => ApplicationContainer.Dispose());
         }

@@ -1,3 +1,6 @@
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.Test\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.Test\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.Test\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.Test\bin\Debug\netcoreapp2.1\PlayTogether.Test.deps.json
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.Test\bin\Debug\netcoreapp2.1\PlayTogether.Test.runtimeconfig.json
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.Test\bin\Debug\netcoreapp2.1\PlayTogether.Test.runtimeconfig.dev.json

@@ -13,12 +13,10 @@ namespace PlayTogether.Core.Domains
         public string UserName { get; protected set; }
 
         public string Email { get; protected set; }
-
         public string Password { get; protected set; }
 
         public string Salt { get; protected set;  }
 
-        public string Hash { get; protected set; }
 
         public DateTime CreatedAt { get; protected set; }
 
