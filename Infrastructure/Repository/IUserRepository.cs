@@ -1,12 +1,11 @@
-﻿using PlayTogether.Core.Domains;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
+using PlayTogether.Core.Domains;
 
-namespace PlayTogether.Core.Repository
+namespace PlayTogether.Infrastructure.Repository
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository
     {
         Task AddAsync(User user);
 

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using PlayTogether;
+using PlayTogether.Api;
 
 namespace WebApplication1
 {
@@ -20,6 +21,12 @@ namespace WebApplication1
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                    config.SetBasePath(Directory.GetCurrentDirectory());
+                    config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: false);
+                    config.AddCommandLine(args);
+                })
                 .UseStartup<Startup>();
     }
 }

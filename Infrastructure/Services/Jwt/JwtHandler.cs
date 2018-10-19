@@ -13,9 +13,9 @@ namespace PlayTogether.Infrastructure.Services.Jwt
 {
     public class JwtHandler : IJwthandler
     {
-        private readonly IOptions<JwtSettings> _settings;
+        private readonly JwtSettings _settings;
 
-        public JwtHandler(IOptions<JwtSettings> settings)
+        public JwtHandler(JwtSettings settings)
         {
             _settings = settings;
         }
@@ -32,11 +32,11 @@ namespace PlayTogether.Infrastructure.Services.Jwt
                 new Claim(JwtRegisteredClaimNames.Iat, now.toTimeStamp().ToString(), ClaimValueTypes.Integer64)
             };
 
-            var expires = now.AddMinutes(_settings.Value.Time);
-            var signingCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_settings.Value.Key)),
+            var expires = now.AddMinutes(_settings.Time);
+            var signingCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_settings.Key)),
                 SecurityAlgorithms.HmacSha256);
             var jwt = new JwtSecurityToken(
-                issuer: _settings.Value.Issuer,
+                issuer: _settings.Issuer,
                 claims: claims,
                 notBefore: now,
                 expires: expires,

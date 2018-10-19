@@ -1,25 +1,22 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using PlayTogether.Infrastructure.Services.UserServices;
-using PlayTogether.Infrastructure.Repository;
-using PlayTogether.Core.Repository;
-using PlayTogether.Infrastructure.Mapper;
-using Autofac;
-using Autofac.Extensions.DependencyInjection;
-using System;
+using Microsoft.Extensions.Options;
 using PlayTogether.Infrastructure.Extensions;
-using PlayTogether.Infrastructure.Ioc.Modules;
-using PlayTogether.Infrastructure.Services;
-using PlayTogether.Infrastructure.Services.Jwt;
+using PlayTogether.Infrastructure.Ioc;
 using PlayTogether.Infrastructure.Settings;
 
-namespace PlayTogether
+namespace PlayTogether.Api
 {
     public class Startup
     {
+        private readonly IOptions<JwtSettings> _settings;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -33,18 +30,12 @@ namespace PlayTogether
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IUserRepository, InMemoryUserRepository>();
-            services.AddScoped<IEncrypter, Encrypter>();
-            services.AddScoped<IJwthandler, JwtHandler>();
-            services.AddSingleton(AutoMapperConfig.Initialize());
             services.AddOptions();
             services.AddJwt();
-            services.AddAuthentication();
             var builder = new ContainerBuilder();
             //register commandModules 
-            builder.RegisterModule<CommandsModules>();
             builder.Populate(services);
+            builder.RegisterModule(new ContainerModules(Configuration));
             ApplicationContainer = builder.Build();
 
             return new AutofacServiceProvider(ApplicationContainer);

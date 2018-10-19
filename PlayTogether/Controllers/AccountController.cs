@@ -3,9 +3,7 @@ using PlayTogether.Api.Base;
 using PlayTogether.Infrastructure.Commands;
 using PlayTogether.Infrastructure.Commands.Account;
 using PlayTogether.Infrastructure.Services.UserServices;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using PlayTogether.Infrastructure.Services.Jwt;

@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PlayTogether.Api.Base;
-using PlayTogether.Core.Domains;
 using PlayTogether.Infrastructure.Commands;
-using PlayTogether.Infrastructure.Commands.User;
-using PlayTogether.Infrastructure.Dto;
+using PlayTogether.Infrastructure.Commands.Account;
 using PlayTogether.Infrastructure.Services.UserServices;
 
-namespace PlayTogether.Controllers
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using PlayTogether.Core.Domains;
+using PlayTogether.Infrastructure.Commands.User;
+
+namespace PlayTogether.Api.Controllers
 {
     public class UserController : ApiControllerBase
     {
@@ -23,9 +24,18 @@ namespace PlayTogether.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<User> GetAll()
+        public  IEnumerable<User> GetAll()
         {
-            return _userContext.GetAllAsync().Result;
+            try
+            {
+                return _userContext.GetAlAsync().Result;
+
+            }
+            catch (AggregateException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return  _userContext.GetAlAsync().Result;
         }
 
         [HttpGet("{email}")]

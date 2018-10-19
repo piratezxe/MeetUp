@@ -2283,6 +2283,9 @@
       "PlayTogether.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.1.1"
+        },
         "compile": {
           "bin/placeholder/PlayTogether.Core.dll": {}
         },

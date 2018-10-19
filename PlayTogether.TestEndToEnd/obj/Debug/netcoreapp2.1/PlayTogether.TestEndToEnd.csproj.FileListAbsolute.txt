@@ -22,12 +22,6 @@ C:\Users\rusek\source\repos\PlayTogether\PlayTogether.TestEndToEnd\obj\Debug\net
 C:\Users\rusek\source\repos\PlayTogether\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.RazorAssemblyInfo.cache
 C:\Users\rusek\source\repos\PlayTogether\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.RazorAssemblyInfo.cs
 C:\Users\rusek\source\repos\PlayTogether\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.RazorTargetAssemblyInfo.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.csprojAssemblyReference.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.csproj.CoreCompileInputs.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.RazorAssemblyInfo.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.RazorAssemblyInfo.cs
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.AssemblyInfoInputs.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.AssemblyInfo.cs
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
@@ -42,6 +36,12 @@ C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEn
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\bin\Debug\netcoreapp2.1\PlayTogether.Api.pdb
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\bin\Debug\netcoreapp2.1\PlayTogether.Core.pdb
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\bin\Debug\netcoreapp2.1\PlayTogether.Infrastructure.pdb
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.csprojAssemblyReference.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.csproj.CoreCompileInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.RazorAssemblyInfo.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.RazorAssemblyInfo.cs
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.AssemblyInfoInputs.cache
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.AssemblyInfo.cs
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.RazorTargetAssemblyInfo.cache
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.csproj.CopyComplete
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether.TestEndToEnd\obj\Debug\netcoreapp2.1\PlayTogether.TestEndToEnd.dll

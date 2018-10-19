@@ -15,3 +15,4 @@ C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\Core\obj\Debug\nets
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.AssemblyInfo.cs
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.dll
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.pdb
+C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.csprojAssemblyReference.cache

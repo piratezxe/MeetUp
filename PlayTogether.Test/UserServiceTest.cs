@@ -1,10 +1,10 @@
 using AutoMapper;
 using Moq;
 using PlayTogether.Core.Domains;
-using PlayTogether.Core.Repository;
 using PlayTogether.Infrastructure.Services.UserServices;
 using System;
 using System.Threading.Tasks;
+using PlayTogether.Infrastructure.Repository;
 using PlayTogether.Infrastructure.Services;
 using Xunit;
 
