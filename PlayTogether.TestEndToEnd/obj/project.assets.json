@@ -5342,6 +5342,9 @@
       "PlayTogether.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.1.1"
+        },
         "compile": {
           "bin/placeholder/PlayTogether.Core.dll": {}
         },
@@ -14146,6 +14149,7 @@
       "FluentAssertions >= 5.4.2",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.TestHost >= 2.1.1",
+      "Microsoft.Extensions.Options.ConfigurationExtensions >= 2.1.1",
       "Microsoft.NET.Test.Sdk >= 15.8.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "Newtonsoft.Json >= 11.0.2",
@@ -14210,6 +14214,10 @@
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.TestHost": {
+            "target": "Package",
+            "version": "[2.1.1, )"
+          },
+          "Microsoft.Extensions.Options.ConfigurationExtensions": {
             "target": "Package",
             "version": "[2.1.1, )"
           },

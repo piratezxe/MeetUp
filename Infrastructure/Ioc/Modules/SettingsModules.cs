@@ -1,6 +1,6 @@
 ﻿using Autofac;
-using AutoMapper.Configuration;
-using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Configuration;
+using PlayTogether.Infrastructure.Extensions;
 using PlayTogether.Infrastructure.Settings;
 
 namespace PlayTogether.Infrastructure.Ioc.Modules
@@ -9,17 +9,16 @@ namespace PlayTogether.Infrastructure.Ioc.Modules
     {
         private readonly IConfiguration _configuration;
 
-        private readonly IOptions<JwtSettings> _jwtSettings;
 
-        public SettingsModules(IConfiguration configuration, IOptions<JwtSettings> jwtSettings)
+        public SettingsModules(IConfiguration configuration)
         {
             _configuration = configuration;
-            _jwtSettings = jwtSettings;
         }
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterInstance(_jwtSettings);
+            builder.RegisterInstance(_configuration.GetSettings<JwtSettings>())
+                .SingleInstance();
         }
     }
 }

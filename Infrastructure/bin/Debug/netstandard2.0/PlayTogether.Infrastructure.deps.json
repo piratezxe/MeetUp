@@ -1832,6 +1832,9 @@
         }
       },
       "PlayTogether.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.1.1"
+        },
         "runtime": {
           "PlayTogether.Core.dll": {}
         }

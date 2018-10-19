@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using PlayTogether.Core.Domains;
-using PlayTogether.Core.Repository;
 using PlayTogether.Infrastructure.Dto;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using PlayTogether.Infrastructure.Repository;
 
 namespace PlayTogether.Infrastructure.Services.UserServices
 {
@@ -24,7 +24,7 @@ namespace PlayTogether.Infrastructure.Services.UserServices
             _user = userRepo;
         }
 
-        public async Task<IEnumerable<User>> GetAllAsync()
+        public async Task<IEnumerable<User>> GetAlAsync()
         {
             return await _user.GetAllAsync();
         }
@@ -51,9 +51,9 @@ namespace PlayTogether.Infrastructure.Services.UserServices
             throw new ArgumentException($"Password: {password} is invalid");
         }
 
-        public Task ChangePasswordAsync(string currentPassword, string newPassword)
+        public async Task ChangePasswordAsync(string currentPassword, string newPassword)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
 
         public async Task RegisterUserAsync(string email, string password, string username)

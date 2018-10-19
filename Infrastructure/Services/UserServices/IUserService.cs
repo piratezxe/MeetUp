@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace PlayTogether.Infrastructure.Services.UserServices
 {
-    public interface IUserService
+    public interface IUserService : IService
     {
         Task RegisterUserAsync(string email, string password, string username);
 
-        Task<IEnumerable<User>> GetAllAsync();
+        Task<IEnumerable<User>> GetAlAsync();
 
         Task<UserDto> GetByEmailAsync(string email);
 

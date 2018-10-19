@@ -1,17 +1,14 @@
-﻿using Autofac;
+﻿using System.Reflection;
+using Autofac;
 using PlayTogether.Infrastructure.Commands;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
 
 namespace PlayTogether.Infrastructure.Ioc.Modules
 {
-    public class CommandsModules : Autofac.Module
+    public class CommandModule : Autofac.Module
     {
         protected override void Load(ContainerBuilder builder)
         {
-            var assembly = typeof(CommandsModules)
+            var assembly = typeof(CommandModule)
                 .GetTypeInfo()
                 .Assembly;
 
