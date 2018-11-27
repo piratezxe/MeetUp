@@ -38,3 +38,5 @@ C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether\obj\De
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether\obj\Debug\netcoreapp2.1\PlayTogether.Api.dll
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether\obj\Debug\netcoreapp2.1\PlayTogether.Api.pdb
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\PlayTogether\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+D:\Projekty\PlayTogether\PartTimeJobsService\PlayTogether\obj\Debug\netcoreapp2.1\PlayTogether.Api.dll
+D:\Projekty\PlayTogether\PartTimeJobsService\PlayTogether\obj\Debug\netcoreapp2.1\PlayTogether.Api.pdb

@@ -24,3 +24,9 @@ C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\Infrastructure\obj\
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.csproj.CopyComplete
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.dll
 C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.pdb
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.csprojAssemblyReference.cache
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.AssemblyInfoInputs.cache
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.AssemblyInfo.cs
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.dll
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.pdb

@@ -6,9 +6,9 @@ using PlayTogether.Infrastructure.Commands;
 
 namespace PlayTogether.Infrastructure.Handler.Employer
 {
-    public class CreateEmployer : ICommandHandler<CreateEmployer>
+    public class CreateEmployer : ICommandHandler<CreateEmployeer>
     {
-        public Task HandlerAsync(CreateEmployer command)
+        public Task HandlerAsync(CreateEmployeer command)
         {
             throw new NotImplementedException();
         }
