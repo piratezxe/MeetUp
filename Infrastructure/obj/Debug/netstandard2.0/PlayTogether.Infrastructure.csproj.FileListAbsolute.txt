@@ -30,3 +30,9 @@ D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandar
 D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.AssemblyInfo.cs
 D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.dll
 D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.pdb
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Infrastructure.deps.json
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Infrastructure.dll
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Infrastructure.pdb
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Core.dll
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Core.pdb
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.csproj.CopyComplete

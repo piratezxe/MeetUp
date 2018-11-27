@@ -14284,11 +14284,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\PlayTogether.TestEndToEnd\\PlayTogether.TestEndToEnd.csproj",
+      "projectUniqueName": "D:\\Projekty\\PlayTogether\\PartTimeJobsService\\PlayTogether.TestEndToEnd\\PlayTogether.TestEndToEnd.csproj",
       "projectName": "PlayTogether.TestEndToEnd",
-      "projectPath": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\PlayTogether.TestEndToEnd\\PlayTogether.TestEndToEnd.csproj",
+      "projectPath": "D:\\Projekty\\PlayTogether\\PartTimeJobsService\\PlayTogether.TestEndToEnd\\PlayTogether.TestEndToEnd.csproj",
       "packagesPath": "C:\\Users\\rusek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\PlayTogether.TestEndToEnd\\obj\\",
+      "outputPath": "D:\\Projekty\\PlayTogether\\PartTimeJobsService\\PlayTogether.TestEndToEnd\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14307,8 +14307,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\PlayTogether\\PlayTogether.Api.csproj": {
-              "projectPath": "C:\\Users\\rusek\\source\\repos\\PlayTogether\\PartTimeJobsService\\PlayTogether\\PlayTogether.Api.csproj"
+            "D:\\Projekty\\PlayTogether\\PartTimeJobsService\\PlayTogether\\PlayTogether.Api.csproj": {
+              "projectPath": "D:\\Projekty\\PlayTogether\\PartTimeJobsService\\PlayTogether\\PlayTogether.Api.csproj"
             }
           }
         }
