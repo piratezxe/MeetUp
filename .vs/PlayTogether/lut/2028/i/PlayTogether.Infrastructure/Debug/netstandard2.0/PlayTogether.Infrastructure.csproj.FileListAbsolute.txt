@@ -1,8 +1,0 @@
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlayTogether.Infrastructure\Debug\netstandard2.0\PlayTogether.Infrastructure.deps.json
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\b\PlayTogether.Infrastructure\Debug\netstandard2.0\PlayTogether.Infrastructure.dll
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Infrastructure\Debug\netstandard2.0\PlayTogether.Infrastructure.csprojAssemblyReference.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Infrastructure\Debug\netstandard2.0\PlayTogether.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Infrastructure\Debug\netstandard2.0\PlayTogether.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Infrastructure\Debug\netstandard2.0\PlayTogether.Infrastructure.AssemblyInfo.cs
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Infrastructure\Debug\netstandard2.0\PlayTogether.Infrastructure.csproj.CopyComplete
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Infrastructure\Debug\netstandard2.0\PlayTogether.Infrastructure.dll

@@ -17,6 +17,7 @@ namespace PlayTogether.Infrastructure.Services.UserServices
 
         private readonly IEncrypter _encrypter;
 
+
         public UserService(IUserRepository userRepo, IMapper mapper, IEncrypter encrypter)
         {
             _mapper = mapper;
@@ -35,25 +36,20 @@ namespace PlayTogether.Infrastructure.Services.UserServices
             return _mapper.Map<User, UserDto>(user);
         }
 
-        public async Task LoginAsync(string password, string email)
+
+        public async Task ChangePasswordAsync(string currentPassword, string newPassword, string email)
         {
             var user = await _user.GetAsyncByEmail(email);
-            if (user == null)
+            if(user == null)
             {
-                throw new  ArgumentNullException($"User with {email} not exist");
+                throw new ArgumentNullException($"User with {email} not exist");
             }
-
-            var hash = _encrypter.GetHash(user.Salt, password);
-
-            if (user.Password == hash)
-                return;
-
-            throw new ArgumentException($"Password: {password} is invalid");
-        }
-
-        public async Task ChangePasswordAsync(string currentPassword, string newPassword)
-        {
-            await Task.CompletedTask;
+            if(currentPassword == newPassword)
+            {
+                throw new ArgumentException("Password are the same");
+            }
+            var salt = _encrypter.GetSalt(newPassword);
+            user.Password = _encrypter.GetHash(salt, newPassword);
         }
 
         public async Task RegisterUserAsync(string email, string password, string username)
@@ -67,7 +63,7 @@ namespace PlayTogether.Infrastructure.Services.UserServices
 
             var salt = _encrypter.GetSalt(password);
             var hash = _encrypter.GetHash(salt, password);
-            user = new User(email, hash, salt, username);
+            user = new User(email, hash, salt, username, "user");
             await _user.AddAsync(user);
         }
     }

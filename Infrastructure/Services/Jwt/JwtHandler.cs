@@ -8,6 +8,9 @@ using Microsoft.IdentityModel.Tokens;
 using PlayTogether.Infrastructure.Dto;
 using PlayTogether.Infrastructure.Extensions;
 using PlayTogether.Infrastructure.Settings;
+using System.Security.Cryptography;
+using PlayTogether.Core;
+using PlayTogether.Core.Domains;
 
 namespace PlayTogether.Infrastructure.Services.Jwt
 {
@@ -20,7 +23,22 @@ namespace PlayTogether.Infrastructure.Services.Jwt
             _settings = settings;
         }
 
-        public JwtDto CreateToken(string email, string role)
+        public RefreshToken CreateRefreshToken(string email, string role)
+        {
+            var randomNumber = new byte[32];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(randomNumber);
+                return new RefreshToken {
+                     Email = email,
+                     Role = role,
+                     Token = Convert.ToBase64String(randomNumber),
+                };
+
+            }
+        }
+
+        public JsonWebToken CreateToken(string email, string role)
         {
             var now = DateTime.UtcNow;
             var claims = new Claim[]
@@ -44,10 +62,9 @@ namespace PlayTogether.Infrastructure.Services.Jwt
             );
             var token = new JwtSecurityTokenHandler().WriteToken(jwt);
 
-            return new JwtDto
+            return new JsonWebToken
             {
-                Token = token,
-                Expires = expires.toTimeStamp()
+                AccessToken = token
             };
         }
 

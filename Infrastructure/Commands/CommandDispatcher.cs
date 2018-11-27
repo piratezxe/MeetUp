@@ -9,7 +9,6 @@ namespace PlayTogether.Infrastructure.Commands
     public class CommandDispatcher : ICommandDispatcher
     {
         private readonly IComponentContext _context;
-
         public CommandDispatcher(IComponentContext context)
         {
             _context = context;

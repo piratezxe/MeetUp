@@ -7,7 +7,8 @@ namespace PlayTogether.Infrastructure.Commands.Account
 {
     public class LoginAsync : ICommands
     {
-        public  string Email { get; set; }
+        public Guid TokenId { get; set; }
+        public string Email { get; set; }
         public  string Password { get; set; }
     }
 }

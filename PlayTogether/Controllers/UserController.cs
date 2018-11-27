@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using PlayTogether.Api.Base;
 using PlayTogether.Infrastructure.Commands;
-using PlayTogether.Infrastructure.Commands.Account;
 using PlayTogether.Infrastructure.Services.UserServices;
-
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using PlayTogether.Core.Domains;
 using PlayTogether.Infrastructure.Commands.User;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PlayTogether.Api.Controllers
 {
@@ -22,19 +20,10 @@ namespace PlayTogether.Api.Controllers
         {
             _userContext = UserContext;
         }
-
+        [Authorize(Policy = "RequireAdministratorRole")]
         [HttpGet]
         public  IEnumerable<User> GetAll()
         {
-            try
-            {
-                return _userContext.GetAlAsync().Result;
-
-            }
-            catch (AggregateException e)
-            {
-                Console.WriteLine(e.Message);
-            }
             return  _userContext.GetAlAsync().Result;
         }
 

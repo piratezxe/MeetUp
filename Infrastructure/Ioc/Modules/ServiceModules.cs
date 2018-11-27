@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Autofac;
 using PlayTogether.Infrastructure.Services;
+using PlayTogether.Infrastructure.Services.Account;
 using PlayTogether.Infrastructure.Services.Jwt;
 
 namespace PlayTogether.Infrastructure.Ioc.Modules
@@ -22,9 +23,10 @@ namespace PlayTogether.Infrastructure.Ioc.Modules
                 .As<IJwthandler>()
                 .SingleInstance();
 
-            builder.RegisterType<Encrypter>()
+               builder.RegisterType<Encrypter>()
                 .As<IEncrypter>()
                 .SingleInstance();
+
 ;        }
     }
 }

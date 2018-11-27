@@ -13,14 +13,15 @@ namespace PlayTogether.Core.Domains
         public string UserName { get; protected set; }
 
         public string Email { get; protected set; }
-        public string Password { get; protected set; }
+        public string Password { get; set; }
 
         public string Salt { get; protected set;  }
-
 
         public DateTime CreatedAt { get; protected set; }
 
         public bool Activity { get; protected set; }
+
+        public  string Role { get; protected set; }
 
         public DateTime LastActivity { get; protected set; }
 
@@ -28,8 +29,9 @@ namespace PlayTogether.Core.Domains
         {
 
         }
-        public User(string email, string password, string salt, string username)
+        public User(string email, string password, string salt, string username, string role)
         {
+            Role = role;
             Email = email.ToLowerInvariant();
             Password = password;
             Salt = salt;

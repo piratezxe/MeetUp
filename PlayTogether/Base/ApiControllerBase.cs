@@ -8,7 +8,7 @@ using PlayTogether.Infrastructure.Commands;
 
 namespace PlayTogether.Api.Base
 {
-    [Route("[controller]/[action]")]
+    [Route("[controller]")]
     public abstract class ApiControllerBase : Controller
     {
         protected readonly ICommandDispatcher _commandDispatcher;
