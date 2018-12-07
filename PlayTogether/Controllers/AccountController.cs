@@ -82,5 +82,6 @@ namespace PlayTogether.Api.Controllers
             var jwt = _memoryCache.Get<JsonWebToken>(login.TokenId);
             return Json(jwt);
         }
+
     }
 }

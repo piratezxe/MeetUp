@@ -19,9 +19,12 @@ C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\Core\obj\Debug\nets
 D:\Projekty\PlayTogether\PartTimeJobsService\Core\bin\Debug\netstandard2.0\PlayTogether.Core.deps.json
 D:\Projekty\PlayTogether\PartTimeJobsService\Core\bin\Debug\netstandard2.0\PlayTogether.Core.dll
 D:\Projekty\PlayTogether\PartTimeJobsService\Core\bin\Debug\netstandard2.0\PlayTogether.Core.pdb
-D:\Projekty\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.csprojAssemblyReference.cache
 D:\Projekty\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.csproj.CoreCompileInputs.cache
 D:\Projekty\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.AssemblyInfoInputs.cache
 D:\Projekty\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.AssemblyInfo.cs
 D:\Projekty\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.dll
 D:\Projekty\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.pdb
+D:\Projekty\PlayTogether\PartTimeJobsService\Core\bin\Debug\netstandard2.0\Microsoft.Extensions.Identity.Core.dll
+D:\Projekty\PlayTogether\PartTimeJobsService\Core\bin\Debug\netstandard2.0\Microsoft.Extensions.Identity.Core.xml
+D:\Projekty\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.csproj.CopyComplete
+D:\Projekty\PlayTogether\PartTimeJobsService\Core\obj\Debug\netstandard2.0\PlayTogether.Core.csprojAssemblyReference.cache

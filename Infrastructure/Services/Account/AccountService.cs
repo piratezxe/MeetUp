@@ -1,9 +1,11 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 using PlayTogether.Core;
+using PlayTogether.Core.Domains;
 using PlayTogether.Infrastructure.Repository;
 using PlayTogether.Infrastructure.Services.Jwt;
 using System;
 using System.Threading.Tasks;
+using PlayTogether.Infrastructure.Repository.Token;
 
 namespace PlayTogether.Infrastructure.Services.Account
 {
@@ -15,12 +17,12 @@ namespace PlayTogether.Infrastructure.Services.Account
 
         private readonly IJwthandler _jwthandler;
 
-        private readonly IMemoryCache _cache;
+        private readonly ITokenRepository _repository;
 
-        public AccountService(IJwthandler jwthandler, IUserRepository userRepo, IEncrypter encrypter, IMemoryCache cache)
+        public AccountService(IJwthandler jwthandler, IUserRepository userRepo, IEncrypter encrypter, ITokenRepository repository)
         {
+            _repository = repository;
             _jwthandler = jwthandler;
-            _cache = cache;
             _encrypter = encrypter;
             _userRepo = userRepo;
         }
@@ -41,39 +43,41 @@ namespace PlayTogether.Infrastructure.Services.Account
             throw new ArgumentException($"Password: {password} is invalid");
         }
 
-        public JsonWebToken RefreshAccessToken(string token)
+        public async Task<JsonWebToken> RefreshAccessTokenAsync(string token)
         {
-            var acessToken =_cache.Get<JsonWebToken>(token);
+            var refreshToken = await _repository.GetAsync(token);
 
-            if(acessToken.RefreshTokens == null)
+            if(refreshToken == null)
             {
                 throw new ArgumentNullException("Refresh Token is not exist");
             }
 
-            if(acessToken.RefreshTokens.Revoked)
+            if(refreshToken.Revoked)
             {
                 throw new ArgumentException("Refresh token is revoke");
             }
+            var user = await _userRepo.GetAsync(refreshToken.UserId);
 
-            var new_token  = _jwthandler.CreateToken(acessToken.RefreshTokens.Email, acessToken.RefreshTokens.Role);
-            new_token.RefreshTokens = acessToken.RefreshTokens;
+            var jwt  = _jwthandler.CreateToken(user.Email, user.Role);
+            jwt.RefreshTokens = refreshToken;
 
-            return new_token;
+            return jwt;
         }
 
         public async Task RevokeTokenAsync(string token)
         {
-            var acessToken = _cache.Get<JsonWebToken>(token);
-            if (acessToken.RefreshTokens.Token == null)
+            var refreshToken = await _repository.GetAsync(token);
+            if (refreshToken.Token == null)
             {
                 throw new Exception("Refresh token was not found.");
             }
-            if (acessToken.RefreshTokens.Revoked)
+            if (refreshToken.Revoked)
             {
                 throw new Exception("Refresh token was already revoked.");
             }
-            acessToken.RefreshTokens.Revoked = true;
-            await Task.CompletedTask;
+            refreshToken.Revoke();
+
+            await _repository.UpdateAsync(refreshToken);
         }
     }
 }

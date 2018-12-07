@@ -36,3 +36,5 @@ D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\bin\Debug\netstandar
 D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Core.dll
 D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\bin\Debug\netstandard2.0\PlayTogether.Core.pdb
 D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\obj\Debug\netstandard2.0\PlayTogether.Infrastructure.csproj.CopyComplete
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\bin\Debug\netstandard2.0\Microsoft.Extensions.Identity.Core.dll
+D:\Projekty\PlayTogether\PartTimeJobsService\Infrastructure\bin\Debug\netstandard2.0\Microsoft.Extensions.Identity.Core.xml

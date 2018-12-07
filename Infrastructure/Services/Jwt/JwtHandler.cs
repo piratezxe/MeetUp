@@ -23,21 +23,6 @@ namespace PlayTogether.Infrastructure.Services.Jwt
             _settings = settings;
         }
 
-        public RefreshToken CreateRefreshToken(string email, string role)
-        {
-            var randomNumber = new byte[32];
-            using (var rng = RandomNumberGenerator.Create())
-            {
-                rng.GetBytes(randomNumber);
-                return new RefreshToken {
-                     Email = email,
-                     Role = role,
-                     Token = Convert.ToBase64String(randomNumber),
-                };
-
-            }
-        }
-
         public JsonWebToken CreateToken(string email, string role)
         {
             var now = DateTime.UtcNow;

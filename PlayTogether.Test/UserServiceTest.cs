@@ -36,7 +36,7 @@ namespace PlayTogether.Test
             var userService = new UserService(userRepositoryMock.Object, mapperMock.Object, encryptedMock.Object);
             await userService.GetByEmailAsync("karol@gmail.com");
 
-            var user = new User("karol@gmail.com", "123", "123", "ktos");
+            var user = new User("karol@gmail.com", "123", "123", "ktos", "user");
 
             userRepositoryMock.Setup(x => x.GetAsyncByEmail(It.IsAny<string>()))
                 .ReturnsAsync(user);

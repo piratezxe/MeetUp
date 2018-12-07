@@ -10,7 +10,6 @@ namespace PlayTogether.Infrastructure.Services.Jwt
 {
     public interface IJwthandler
     {
-        RefreshToken CreateRefreshToken(string email, string role);
         JsonWebToken CreateToken(string email, string role);
     }
 }

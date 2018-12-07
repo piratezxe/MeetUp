@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PlayTogether.Core.Domains
 {
@@ -12,7 +10,7 @@ namespace PlayTogether.Core.Domains
 
         public string UserName { get; protected set; }
 
-        public string Email { get; protected set; }
+        public string Email { get;  set; }
         public string Password { get; set; }
 
         public string Salt { get; protected set;  }

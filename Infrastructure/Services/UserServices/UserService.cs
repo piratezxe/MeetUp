@@ -36,7 +36,6 @@ namespace PlayTogether.Infrastructure.Services.UserServices
             return _mapper.Map<User, UserDto>(user);
         }
 
-
         public async Task ChangePasswordAsync(string currentPassword, string newPassword, string email)
         {
             var user = await _user.GetAsyncByEmail(email);

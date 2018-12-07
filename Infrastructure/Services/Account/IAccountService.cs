@@ -9,7 +9,7 @@ namespace PlayTogether.Infrastructure.Services.Account
 {
     public interface IAccountService : IService
     {
-        JsonWebToken RefreshAccessToken(string token);
+        Task<JsonWebToken> RefreshAccessTokenAsync(string token);
         Task LoginAsync(string password, string email);
         Task RevokeTokenAsync(string token);
     }
