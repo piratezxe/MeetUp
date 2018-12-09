@@ -21,7 +21,7 @@ namespace PlayTogether.Test
             var encryptMock = new Mock<IEncrypter>();
 
             var userService = new UserService(userRepositoryMock.Object, mapperMock.Object, encryptMock.Object);
-            await userService.RegisterUserAsync("user@gmail.com", "234", "karol");
+            await userService.RegisterUserAsync(new Guid(), "user@gmail.com", "234", "karol");
 
             userRepositoryMock.Verify(x => x.AddAsync(It.IsAny<User>()), Times.Once);
         }
@@ -36,7 +36,7 @@ namespace PlayTogether.Test
             var userService = new UserService(userRepositoryMock.Object, mapperMock.Object, encryptedMock.Object);
             await userService.GetByEmailAsync("karol@gmail.com");
 
-            var user = new User("karol@gmail.com", "123", "123", "ktos");
+            var user = new User(new Guid(), "karol@gmail.com", "123", "123", "ktos", "user");
 
             userRepositoryMock.Setup(x => x.GetAsyncByEmail(It.IsAny<string>()))
                 .ReturnsAsync(user);

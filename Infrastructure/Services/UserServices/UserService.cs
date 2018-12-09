@@ -17,6 +17,10 @@ namespace PlayTogether.Infrastructure.Services.UserServices
 
         private readonly IEncrypter _encrypter;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> IocRepair-
         public UserService(IUserRepository userRepo, IMapper mapper, IEncrypter encrypter)
         {
             _mapper = mapper;
@@ -35,6 +39,7 @@ namespace PlayTogether.Infrastructure.Services.UserServices
             return _mapper.Map<User, UserDto>(user);
         }
 
+<<<<<<< HEAD
         public async Task LoginAsync(string password, string email)
         {
             var user = await _user.GetAsyncByEmail(email);
@@ -57,6 +62,24 @@ namespace PlayTogether.Infrastructure.Services.UserServices
         }
 
         public async Task RegisterUserAsync(string email, string password, string username)
+=======
+        public async Task ChangePasswordAsync(string currentPassword, string newPassword, string email)
+        {
+            var user = await _user.GetAsyncByEmail(email);
+            if(user == null)
+            {
+                throw new ArgumentNullException($"User with {email} not exist");
+            }
+            if(currentPassword == newPassword)
+            {
+                throw new ArgumentException("Password are the same");
+            }
+            var salt = _encrypter.GetSalt(newPassword);
+            user.Password = _encrypter.GetHash(salt, newPassword);
+        }
+
+        public async Task RegisterUserAsync(Guid userId, string email, string password, string username)
+>>>>>>> IocRepair-
         {
             var user = await _user.GetAsyncByEmail(email);
             Console.WriteLine(user);
@@ -67,7 +90,11 @@ namespace PlayTogether.Infrastructure.Services.UserServices
 
             var salt = _encrypter.GetSalt(password);
             var hash = _encrypter.GetHash(salt, password);
+<<<<<<< HEAD
             user = new User(email, hash, salt, username);
+=======
+            user = new User(userId, email, hash, salt, username, "user");
+>>>>>>> IocRepair-
             await _user.AddAsync(user);
         }
     }

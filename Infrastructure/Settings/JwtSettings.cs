@@ -9,6 +9,7 @@ namespace PlayTogether.Infrastructure.Settings
         public string Issuer { get; set; }
         public int Time { get; set; }
         public string Key { get; set; }
+
     }
 }
 

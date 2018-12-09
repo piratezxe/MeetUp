@@ -1,4 +1,0 @@
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Test\Debug\netstandard2.0\PlayTogether.Test.csprojAssemblyReference.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Test\Debug\netstandard2.0\PlayTogether.Test.csproj.CoreCompileInputs.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Test\Debug\netstandard2.0\PlayTogether.Test.AssemblyInfoInputs.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlayTogether.Test\Debug\netstandard2.0\PlayTogether.Test.AssemblyInfo.cs

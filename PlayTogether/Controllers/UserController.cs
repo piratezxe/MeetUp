@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using PlayTogether.Api.Base;
 using PlayTogether.Infrastructure.Commands;
+<<<<<<< HEAD
 using PlayTogether.Infrastructure.Commands.Account;
 using PlayTogether.Infrastructure.Services.UserServices;
 
@@ -10,6 +11,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using PlayTogether.Core.Domains;
 using PlayTogether.Infrastructure.Commands.User;
+=======
+using PlayTogether.Infrastructure.Services.UserServices;
+using System.Threading.Tasks;
+using PlayTogether.Core.Domains;
+using PlayTogether.Infrastructure.Commands.User;
+using Microsoft.AspNetCore.Authorization;
+>>>>>>> IocRepair-
 
 namespace PlayTogether.Api.Controllers
 {
@@ -22,6 +30,7 @@ namespace PlayTogether.Api.Controllers
         {
             _userContext = UserContext;
         }
+<<<<<<< HEAD
 
         [HttpGet]
         public  IEnumerable<User> GetAll()
@@ -35,6 +44,11 @@ namespace PlayTogether.Api.Controllers
             {
                 Console.WriteLine(e.Message);
             }
+=======
+        [HttpGet]
+        public  IEnumerable<User> GetAll()
+        {
+>>>>>>> IocRepair-
             return  _userContext.GetAlAsync().Result;
         }
 

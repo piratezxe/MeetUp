@@ -21,6 +21,7 @@ namespace PlayTogether.Infrastructure.Ioc
             builder.RegisterModule<ServiceModules>();
             builder.RegisterModule<CommandModule>();
             builder.RegisterModule<RepositoryModule>();
+            builder.RegisterModule<MongoModule>();
             builder.RegisterModule(new SettingsModules(_configuration));
 
         }

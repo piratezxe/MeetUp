@@ -1,4 +1,0 @@
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlatTogether.Test\Debug\netcoreapp2.1\PlatTogether.Test.csprojAssemblyReference.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlatTogether.Test\Debug\netcoreapp2.1\PlatTogether.Test.csproj.CoreCompileInputs.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlatTogether.Test\Debug\netcoreapp2.1\PlatTogether.Test.AssemblyInfoInputs.cache
-C:\Users\rusek\source\repos\PlayTogether\PartTimeJobsService\.vs\PlayTogether\lut\0\i\PlatTogether.Test\Debug\netcoreapp2.1\PlatTogether.Test.AssemblyInfo.cs
