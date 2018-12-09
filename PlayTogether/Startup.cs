@@ -5,13 +5,16 @@ using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using PlayTogether.Core.Domains;
 using PlayTogether.Infrastructure.Extensions;
 using PlayTogether.Infrastructure.Ioc;
+using PlayTogether.Infrastructure.Services.Data;
 using PlayTogether.Infrastructure.Settings;
 
 namespace PlayTogether.Api
@@ -42,6 +45,7 @@ namespace PlayTogether.Api
             var jwt_settings = Configuration.GetSettings<JwtSettings>();
             // Inject AppIdentitySettings so that others can use too
 
+
             services.AddAuthentication(o =>
                 {
                     o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -69,7 +73,7 @@ namespace PlayTogether.Api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime appLifetime)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime appLifetime, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -79,6 +83,16 @@ namespace PlayTogether.Api
             {
                 app.UseHsts();
             }
+            MongoConfigurator.Initialize();
+
+            var generalSetting = Configuration.GetSettings<GeneralSettings>();
+
+            if (generalSetting.seedData)
+            {
+                var dataProvider = serviceProvider.GetService<IDataInitializer>();
+                dataProvider.SeedAsync();
+            }
+
 
             app.UseHttpsRedirection();
             app.UseAuthentication();

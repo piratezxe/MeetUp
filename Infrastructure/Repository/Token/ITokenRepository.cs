@@ -7,7 +7,7 @@ using PlayTogether.Core.Domains;
 
 namespace PlayTogether.Infrastructure.Repository.Token
 {
-    public interface ITokenRepository
+    public interface ITokenRepository :  IMongoRepository
     {
         Task AddToken(RefreshToken token);
         Task RemoveToken(Guid TokenId);

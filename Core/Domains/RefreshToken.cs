@@ -12,7 +12,7 @@ namespace PlayTogether.Core.Domains
         public string Token { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public DateTime? RevokedAt { get; private set; }
-        public bool Revoked => RevokedAt.HasValue;
+        public bool Revoked = false;
 
 
         public RefreshToken(User user, IPasswordHasher<User> passwordHasher)

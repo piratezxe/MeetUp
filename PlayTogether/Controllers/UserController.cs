@@ -20,7 +20,6 @@ namespace PlayTogether.Api.Controllers
         {
             _userContext = UserContext;
         }
-        [Authorize(Policy = "RequireAdministratorRole")]
         [HttpGet]
         public  IEnumerable<User> GetAll()
         {

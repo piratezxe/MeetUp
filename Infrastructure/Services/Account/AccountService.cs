@@ -76,7 +76,6 @@ namespace PlayTogether.Infrastructure.Services.Account
                 throw new Exception("Refresh token was already revoked.");
             }
             refreshToken.Revoke();
-
             await _repository.UpdateAsync(refreshToken);
         }
     }

@@ -51,7 +51,7 @@ namespace PlayTogether.Infrastructure.Services.UserServices
             user.Password = _encrypter.GetHash(salt, newPassword);
         }
 
-        public async Task RegisterUserAsync(string email, string password, string username)
+        public async Task RegisterUserAsync(Guid userId, string email, string password, string username)
         {
             var user = await _user.GetAsyncByEmail(email);
             Console.WriteLine(user);
@@ -62,7 +62,7 @@ namespace PlayTogether.Infrastructure.Services.UserServices
 
             var salt = _encrypter.GetSalt(password);
             var hash = _encrypter.GetHash(salt, password);
-            user = new User(email, hash, salt, username, "user");
+            user = new User(userId, email, hash, salt, username, "user");
             await _user.AddAsync(user);
         }
     }

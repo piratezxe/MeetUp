@@ -16,7 +16,7 @@ namespace PlayTogether.Infrastructure.Handler
 
         public async Task HandlerAsync(CreateUsers command)
         {
-            await _userService.RegisterUserAsync(command.Email, command.Password, command.UserName);
+            await _userService.RegisterUserAsync(command.UserId, command.Email, command.Password, command.UserName);
         }
     }
 }

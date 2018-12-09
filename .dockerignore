@@ -3,6 +3,10 @@
 .git
 .gitignore
 .vs
+*.dll
+*.pdb
+.cache
+.exe
 .vscode
 */bin
 */obj

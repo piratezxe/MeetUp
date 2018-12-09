@@ -27,13 +27,13 @@ namespace PlayTogether.Core.Domains
         {
 
         }
-        public User(string email, string password, string salt, string username, string role)
+        public User(Guid userId, string email, string password, string salt, string username, string role)
         {
             Role = role;
             Email = email.ToLowerInvariant();
             Password = password;
             Salt = salt;
-            Id = Guid.NewGuid();
+            Id = userId;
             CreatedAt = DateTime.UtcNow;
             UserName = username;
         }

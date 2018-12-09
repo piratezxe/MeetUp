@@ -1,13 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Conventions;
 
-namespace PlayTogether.Infrastructure.Settings.mongo
+namespace PlayTogether.Infrastructure.Settings
 {
-    public class MongoConfigurator
+    public static class MongoConfigurator
     {
-        public string ConnectionString { get; set; }
-        public string Database { get; set; }
+        private static bool _initialized;
 
+        public static void Initialize()
+        {
+            if (_initialized)
+            {
+                return;
+            }
+            _initialized = true;
+            RegisterConventions();
+        }
+
+        private static void RegisterConventions()
+        {
+            ConventionRegistry.Register("meetupConventions", new MongoCovention(), x => true);
+        }
+
+        private class MongoCovention : IConventionPack
+        {
+            public IEnumerable<IConvention> Conventions => new List<IConvention>
+            {
+                new IgnoreExtraElementsConvention(true),
+                new EnumRepresentationConvention(BsonType.String),
+                new CamelCaseElementNameConvention()
+            };
+        }
     }
 }

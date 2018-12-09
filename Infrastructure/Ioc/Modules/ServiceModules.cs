@@ -1,5 +1,7 @@
 ﻿using System.Reflection;
 using Autofac;
+using Microsoft.AspNetCore.Identity;
+using PlayTogether.Core.Domains;
 using PlayTogether.Infrastructure.Services;
 using PlayTogether.Infrastructure.Services.Account;
 using PlayTogether.Infrastructure.Services.Jwt;
@@ -23,10 +25,16 @@ namespace PlayTogether.Infrastructure.Ioc.Modules
                 .As<IJwthandler>()
                 .SingleInstance();
 
-               builder.RegisterType<Encrypter>()
+            builder.RegisterType<Encrypter>()
                 .As<IEncrypter>()
                 .SingleInstance();
+             builder.RegisterType<AccountService>()
+                .As<IAccountService>()
+                .SingleInstance();
 
-;        }
+            builder.RegisterType<PasswordHasher<User>>()
+                .As<IPasswordHasher<User>>()
+                .SingleInstance();
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace PlayTogether.Infrastructure.Services.UserServices
 {
     public interface IUserService : IService
     {
-        Task RegisterUserAsync(string email, string password, string username);
+        Task RegisterUserAsync(Guid userId, string email, string password, string username);
 
         Task<IEnumerable<User>> GetAlAsync();
 
