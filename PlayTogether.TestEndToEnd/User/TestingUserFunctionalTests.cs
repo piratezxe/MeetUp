@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Newtonsoft.Json;
-using PlayTogether.Infrastructure.Commands.User;
+using PlayTogether.Infrastructure.Commands;
 using PlayTogether.Infrastructure.Dto;
 using Xunit;
 

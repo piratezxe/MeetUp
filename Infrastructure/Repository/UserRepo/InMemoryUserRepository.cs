@@ -10,15 +10,9 @@ namespace PlayTogether.Infrastructure.Repository
     {
         private static ISet<User> _users = new HashSet<User>()
         {
-<<<<<<< HEAD:Infrastructure/Repository/InMemoryUserRepository.cs
-            new User("karol@gmail.com", "123123123", "123", "ktos"),
-            new User("mateusz@gmail.com", "234234234", "234",  "ktos1"),
-            new User("szymon@gmail.com", "345345345", "345",  "ktos2")
-=======
             new User(new Guid(), "karol@gmail.com", "kylz0YaUqOwuXIRvcGfUtyTes6qSZLktEM5o59nqBI9J20Fc+StgHg==", "123", "ktos", "user"),
             new User(new Guid(), "mateusz@gmail.com", "234234234", "234",  "ktos1", "user"),
             new User(new Guid(), "szymon@gmail.com", "345345345", "345",  "ktos2", "user")
->>>>>>> IocRepair-:Infrastructure/Repository/UserRepo/InMemoryUserRepository.cs
         };
 
         public async Task AddAsync(User user)

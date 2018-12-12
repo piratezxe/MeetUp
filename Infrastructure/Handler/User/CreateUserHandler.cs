@@ -1,5 +1,4 @@
 ﻿using PlayTogether.Infrastructure.Commands;
-using PlayTogether.Infrastructure.Commands.User;
 using PlayTogether.Infrastructure.Services.UserServices;
 using System.Threading.Tasks;
 

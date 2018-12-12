@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PlayTogether.Infrastructure.Commands.User
+namespace PlayTogether.Infrastructure.Commands
 {
     public class CreateUsers : ICommands
     {
-<<<<<<< HEAD
-=======
         public Guid UserId { get; set; }
->>>>>>> IocRepair-
         public string Email { get; set; }
 
         public string Password { get; set; }
