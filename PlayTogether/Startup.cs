@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -40,10 +41,7 @@ namespace PlayTogether.Api
 
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddSpaStaticFiles(configuration =>
-            {
-                configuration.RootPath = "clientapp/build";
-            });
+           
             services.AddOptions();
             services.AddMemoryCache();
 
@@ -99,7 +97,6 @@ namespace PlayTogether.Api
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSpaStaticFiles();
             app.UseAuthentication();
 
             app.UseCors(builder => builder
@@ -109,6 +106,7 @@ namespace PlayTogether.Api
                 .AllowCredentials());
                 
             app.UseMvc();
+
 
             appLifetime.ApplicationStopped.Register(() => ApplicationContainer.Dispose());
         }
