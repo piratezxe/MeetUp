@@ -46,6 +46,10 @@ namespace PlayTogether.Infrastructure.Repository
         {
             throw new NotImplementedException();
         }
-        
+
+        public Task<IEnumerable<Meet>> GetUserMeetUp(string email)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -11,5 +11,10 @@ namespace PlayTogether.Core
         public string AccessToken { get; set; }
         public RefreshToken RefreshTokens { get; set; }
         public long Expires { get; set; }
+
+        public JsonWebToken()
+        {
+            TokenId = new Guid();
+        }     
     }
 }

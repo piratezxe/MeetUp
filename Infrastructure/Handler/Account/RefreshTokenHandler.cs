@@ -27,7 +27,7 @@ namespace PlayTogether.Infrastructure.Handler
         public async Task HandlerAsync(Token command)
         {
             var jwt = await  _accountService.RefreshAccessTokenAsync(command.token);
-            _memoryCache.Set<JsonWebToken>(jwt, jwt);
+            _memoryCache.Set<JsonWebToken>(jwt.RefreshTokens.Token, jwt);
             await Task.CompletedTask;
         }
     }

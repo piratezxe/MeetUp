@@ -21,6 +21,7 @@ namespace WebApplication1
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("https://localhost:44334")
                 .UseStartup<Startup>();
     }
 }

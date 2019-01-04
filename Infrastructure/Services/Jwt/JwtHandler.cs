@@ -49,7 +49,8 @@ namespace PlayTogether.Infrastructure.Services.Jwt
 
             return new JsonWebToken
             {
-                AccessToken = token
+                AccessToken = token,
+                Expires =  expires.toTimeStamp()
             };
         }
 

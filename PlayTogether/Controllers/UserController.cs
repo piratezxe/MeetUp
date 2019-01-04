@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using PlayTogether.Api.Base;
 using PlayTogether.Infrastructure.Services.UserServices;
 using System.Threading.Tasks;
 using PlayTogether.Core.Domains;
 using PlayTogether.Infrastructure.Commands;
+using Microsoft.AspNetCore.Authentication;
 
 namespace PlayTogether.Api.Controllers
 {
+
     public class UserController : ApiControllerBase
     {
         private readonly IUserService _userContext;
@@ -19,7 +22,7 @@ namespace PlayTogether.Api.Controllers
             _userContext = UserContext;
         }
         [HttpGet]
-        public  IEnumerable<User> GetAll()
+        public IEnumerable<User> GetAll()
         {
             return  _userContext.GetAlAsync().Result;
         }
@@ -43,5 +46,6 @@ namespace PlayTogether.Api.Controllers
             await _commandDispatcher.DispatchAsync(user);
             return Created($"User/{user.Email}", null);
         }
+
     }
 }

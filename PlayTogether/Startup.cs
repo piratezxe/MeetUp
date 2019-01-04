@@ -1,17 +1,16 @@
 ﻿using System;
+using System.Security.Claims;
 using System.Text;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using PlayTogether.Core.Domains;
 using PlayTogether.Infrastructure.Extensions;
 using PlayTogether.Infrastructure.Ioc;
 using PlayTogether.Infrastructure.Services.Data;
@@ -38,13 +37,17 @@ namespace PlayTogether.Api
             {
                 options.AddPolicy("RequireAdministratorRole", policy => policy.RequireRole("Administrator"));
             });
+
+            services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "clientapp/build";
+            });
             services.AddOptions();
             services.AddMemoryCache();
 
             var jwt_settings = Configuration.GetSettings<JwtSettings>();
-            // Inject AppIdentitySettings so that others can use too
-
 
             services.AddAuthentication(o =>
                 {
@@ -95,8 +98,18 @@ namespace PlayTogether.Api
 
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseSpaStaticFiles();
             app.UseAuthentication();
+
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+                
             app.UseMvc();
+
             appLifetime.ApplicationStopped.Register(() => ApplicationContainer.Dispose());
         }
     }

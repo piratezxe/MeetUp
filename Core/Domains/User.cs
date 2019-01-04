@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PlayTogether.Core.Domains
 {
@@ -6,27 +7,24 @@ namespace PlayTogether.Core.Domains
     {
         public Guid Id { get; protected set; }
 
-        public string FullName { get; protected set; }
-
         public string UserName { get; protected set; }
 
-        public string Email { get;  set; }
+        public string Email { get; private set; }
         public string Password { get; set; }
 
         public string Salt { get; protected set;  }
 
+        public IList<Guid> SavedMeetUp = new List<Guid>(); 
+
         public DateTime CreatedAt { get; protected set; }
 
-        public bool Activity { get; protected set; }
-
-        public  string Role { get; protected set; }
-
-        public DateTime LastActivity { get; protected set; }
+        public string Role { get; protected set; }
 
         protected User()
         {
 
         }
+
         public User(Guid userId, string email, string password, string salt, string username, string role)
         {
             Role = role;

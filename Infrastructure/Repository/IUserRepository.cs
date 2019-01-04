@@ -8,6 +8,7 @@ namespace PlayTogether.Infrastructure.Repository
     public interface IUserRepository : IRepository
     {
         Task AddAsync(User user);
+        Task<IEnumerable<User>> GetAllAsync();
 
         Task<User> GetAsync(Guid userId);
 
@@ -16,7 +17,5 @@ namespace PlayTogether.Infrastructure.Repository
         Task RemoveAsync(Guid userId);
 
         Task UpdateAsync(User user);
-
-        Task<IEnumerable<User>> GetAllAsync();
     }
 }

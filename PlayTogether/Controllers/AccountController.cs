@@ -18,24 +18,15 @@ namespace PlayTogether.Api.Controllers
 {
     public class AccountController : ApiControllerBase
     {
-        private readonly IUserService _userContext;
-
-        private readonly IJwthandler _jwthandler;
 
         private readonly IMemoryCache _memoryCache;
 
-        private readonly IAccountService _accountService;
-
-        public AccountController(IAccountService accountService, IUserService UserContext, ICommandDispatcher _dispatcher, IJwthandler jwthandler, IMemoryCache memoryCache)
+        public AccountController(ICommandDispatcher _dispatcher, IMemoryCache memoryCache)
             : base(_dispatcher)
         {
-            _accountService = accountService;
-            _userContext = UserContext;
             _memoryCache = memoryCache;
-            _jwthandler = jwthandler;
         }
 
-        // POST api/values
         [HttpPut]
         [Route("password")]
         public async Task<IActionResult> ChangePassword([FromBody] ChangePassword password)
@@ -43,22 +34,8 @@ namespace PlayTogether.Api.Controllers
             await _commandDispatcher.DispatchAsync(password);
             return NoContent();
         }
-        [HttpGet]
-        public async Task<IActionResult> Get()
-        {
-            var token = _jwthandler.CreateToken("karol@gmail.com", "user");
-            return Json(token);
-        }
-        [Route("GetAuthorize")]
-        [HttpGet]
-        public async Task<IActionResult> GetAuthorize()
-        {
-            var token = _jwthandler.CreateToken("karol@gmail.com", "user");
-            return Json(token);
-        }
-
         [HttpPut]
-        [Route("token")]
+        [Route("refresh")]
         public async Task<IActionResult> RefreshToken([FromBody]Token token)
         {
             await _commandDispatcher.DispatchAsync(token);
@@ -70,8 +47,7 @@ namespace PlayTogether.Api.Controllers
         public async Task<IActionResult> RevokeToken([FromBody]RevokeToken token)
         {
             await _commandDispatcher.DispatchAsync(token);
-            var jwt = _memoryCache.Get<JsonWebToken>(token.Token);
-            return Json(jwt);
+            return Ok(null);
         }
 
         [HttpPost]

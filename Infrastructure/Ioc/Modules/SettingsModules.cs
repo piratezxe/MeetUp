@@ -25,6 +25,10 @@ namespace PlayTogether.Infrastructure.Ioc.Modules
 
             builder.RegisterInstance(_configuration.GetSettings<GeneralSettings>())
                 .SingleInstance();
+
+            builder.RegisterInstance(_configuration.GetSettings<GoogleAuthSettings>())
+                .SingleInstance();
+           
         }
     }
 }

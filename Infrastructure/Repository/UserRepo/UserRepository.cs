@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
@@ -20,6 +21,7 @@ namespace PlayTogether.Infrastructure.Repository
 
         public async Task<IEnumerable<User>> GetAllAsync()
             => await Users.AsQueryable().ToListAsync();
+
 
         public async Task AddAsync(User user)
             => await Users.InsertOneAsync(user);
