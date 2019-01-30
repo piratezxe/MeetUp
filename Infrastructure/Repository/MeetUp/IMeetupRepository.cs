@@ -1,8 +1,10 @@
-﻿using PlayTogether.Core.Domains;
+﻿using Core.Domains;
+using PlayTogether.Core.Domains;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PlayTogether.Infrastructure.Repository.MeetUp
 {
@@ -13,6 +15,6 @@ namespace PlayTogether.Infrastructure.Repository.MeetUp
         Task DeleteAsync(Guid Id);
         Task UpdateAsync(Meet meetup);
         Task<Meet> GetMeetById(Guid meetupId);
-        Task<IEnumerable<Meet>> GetUserMeetUp(string email);
+        Task<IEnumerable<JoinToTheEvent>> GetUserMeetUp(Guid userId);
     }
 }

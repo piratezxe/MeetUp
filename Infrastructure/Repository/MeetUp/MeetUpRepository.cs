@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Domains;
+using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 using PlayTogether.Core.Domains;
@@ -39,10 +41,8 @@ namespace PlayTogether.Infrastructure.Repository.MeetUp
 
             => await Meets.AsQueryable().FirstOrDefaultAsync(x => x.Id == meetupId);
 
-        public async Task<IEnumerable<Meet>> GetUserMeetUp(string email)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<IEnumerable<JoinToTheEvent>> GetUserMeetUp(Guid userId)
+           => await Meets.AsQueryable().SelectMany(x => x.MeetMember).Where(k => k.UserId == userId).ToListAsync();
 
         private IMongoCollection<Meet> Meets => _database.GetCollection<Meet>("Meet");
     }
