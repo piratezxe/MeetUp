@@ -5,7 +5,6 @@ using PlayTogether.Infrastructure.Commands;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
-using PlayTogether.Infrastructure.Commands.Employeer;
 using PlayTogether.Infrastructure.Commands.Meet;
 
 namespace PlayTogether.Controllers
@@ -13,7 +12,7 @@ namespace PlayTogether.Controllers
     [Authorize]
     public class MeetUpController : ApiControllerBase
     {
-        public MeetUpController(ICommandDispatcher _dispatcher): base(_dispatcher)
+        public MeetUpController(ICommandDispatcher dispatcher): base(dispatcher)
         {
         }
 

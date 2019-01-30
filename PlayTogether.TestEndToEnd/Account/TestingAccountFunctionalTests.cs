@@ -10,6 +10,7 @@ namespace PlayTogether.TestEndToEnd.Account
     {
         public TestingAccountFunctionalTests(): base()
         {
+            
         }
     }
 }

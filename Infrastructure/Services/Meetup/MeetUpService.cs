@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Core.Domains;
 
 namespace PlayTogether.Infrastructure.Services.Meetup
 {
@@ -60,12 +61,14 @@ namespace PlayTogether.Infrastructure.Services.Meetup
                 throw new ArgumentNullException("MeetUp not exist");
             }
 
-            if (meetUp.MeetMember.Contains(user))
+            var join = new JoinToTheEvent(user.Id, meetUp.Id); 
+
+            if (meetUp.MeetMember.Contains(join))
             {
                 throw new ArgumentException("User actual exist in the event");
             }
 
-            meetUp.MeetMember.Add(user);
+            meetUp.MeetMember.Add(join);
             await _meetupRepository.UpdateAsync(meetUp);
         }
         public async Task SignOfFromEvent(Guid userId, Guid MetUpId)
@@ -84,12 +87,12 @@ namespace PlayTogether.Infrastructure.Services.Meetup
                 throw new ArgumentNullException("MeetUp not exist");
             }
 
-            if (meetUp.MeetMember.All(x => x.Id != userId))
+            if (meetUp.MeetMember.All(x => x.UserId != userId))
             {
                 throw new ArgumentException("User not actual exist in the event");
             }
 
-            var meetAssigment = meetUp.MeetMember.FirstOrDefault(x => x.Id == userId);
+            var meetAssigment = meetUp.MeetMember.FirstOrDefault(x => x.UserId == userId);
             meetUp.MeetMember.Remove(meetAssigment);
             await _meetupRepository.UpdateAsync(meetUp);
         }

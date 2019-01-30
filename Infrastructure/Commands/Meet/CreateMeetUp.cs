@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace PlayTogether.Infrastructure.Commands.Employeer
+namespace PlayTogether.Infrastructure.Commands.Meet
 {
     public class CreateMeetUp : ICommands
     {

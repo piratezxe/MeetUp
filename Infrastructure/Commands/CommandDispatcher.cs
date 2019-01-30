@@ -17,6 +17,11 @@ namespace PlayTogether.Infrastructure.Commands
         {
             //check if command is null
             //pobieranie z kontenerea ioc zarejestrowanego command handlera dla komendy
+            if (command == null)
+            {
+                throw new ArgumentNullException(nameof(command),
+                    "Command can not be null.");
+            }
             var handler = _context.Resolve<ICommandHandler<T>>();
             await handler.HandlerAsync(command);
         }

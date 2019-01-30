@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using System.Threading.Tasks;
 using PlayTogether.Api.Base;
-using PlayTogether.Core.Domains;
 using PlayTogether.Infrastructure.Commands;
-using PlayTogether.Infrastructure.Repository;
 using PlayTogether.Infrastructure.Repository.MeetUp;
+using Core.Domains;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PlayTogether.Api.Controllers
 {
@@ -20,11 +20,8 @@ namespace PlayTogether.Api.Controllers
             _meetupRepository = meetupRepository;
         }
 
-        [HttpGet]
-        public IEnumerable<Meet> GetSavedMeetUp()
-        {
-            string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            return _meetupRepository.GetUserMeetUp(userId).Result;
-        }
+        [HttpGet("{GuidUserID}")]
+        public async  Task<IEnumerable<JoinToTheEvent>> GetSavedMeetUp(Guid GuidUserID)
+            =>  await _meetupRepository.GetUserMeetUp(GuidUserID);
     }
 }

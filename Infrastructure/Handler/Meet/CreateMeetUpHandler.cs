@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using PlayTogether.Infrastructure.Commands;
-using PlayTogether.Infrastructure.Commands.Employeer;
+using PlayTogether.Infrastructure.Commands.Meet;
 using PlayTogether.Infrastructure.Services.Meetup;
 
-namespace Infrastructure.Handler.Meet
+namespace PlayTogether.Infrastructure.Handler.Meet
 {
     public class CreateMeetUpHandler : ICommandHandler<CreateMeetUp>
     {
