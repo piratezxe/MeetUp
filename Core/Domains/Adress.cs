@@ -13,12 +13,7 @@
             Coordinate = coordinate;
         }
 
-        public Adress(Coordinate coordinate, string city)
-        {
-            City = city;
-            Coordinate = coordinate;
-        }
-        public Adress( string city)
+        public Adress(string city)
         {
             City = city;
         }

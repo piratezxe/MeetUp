@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Core.Domains;
 
 namespace PlayTogether.Core.Domains
 {
@@ -14,7 +15,7 @@ namespace PlayTogether.Core.Domains
 
         public string Salt { get; protected set;  }
 
-        public IList<Guid> SavedMeetUp = new List<Guid>(); 
+        public IList<JoinToTheEvent> SavedMeetUp = new List<JoinToTheEvent>(); 
 
         public DateTime CreatedAt { get; protected set; }
 
