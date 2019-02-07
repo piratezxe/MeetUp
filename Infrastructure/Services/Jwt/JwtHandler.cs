@@ -11,6 +11,7 @@ using PlayTogether.Infrastructure.Settings;
 using System.Security.Cryptography;
 using PlayTogether.Core;
 using PlayTogether.Core.Domains;
+using PlayTogether.Infrastructure.Repository;
 
 namespace PlayTogether.Infrastructure.Services.Jwt
 {
@@ -25,6 +26,7 @@ namespace PlayTogether.Infrastructure.Services.Jwt
 
         public JsonWebToken CreateToken(string email, string role)
         {
+
             var now = DateTime.UtcNow;
             var claims = new Claim[]
             {

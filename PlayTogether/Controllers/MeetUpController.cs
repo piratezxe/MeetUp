@@ -6,14 +6,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using PlayTogether.Infrastructure.Commands.Meet;
+using PlayTogether.Infrastructure.Repository.MeetUp;
+using System.Collections;
+using System.Collections.Generic;
+using PlayTogether.Core.Domains;
 
 namespace PlayTogether.Controllers
 {
     [Authorize]
     public class MeetUpController : ApiControllerBase
     {
-        public MeetUpController(ICommandDispatcher dispatcher): base(dispatcher)
+        private readonly IMeetupRepository _meetupRepository; 
+        public MeetUpController(ICommandDispatcher dispatcher, IMeetupRepository meetupRepository): base(dispatcher)
         {
+            _meetupRepository = meetupRepository;
         }
 
         [HttpPost]
@@ -43,6 +49,22 @@ namespace PlayTogether.Controllers
         {
             await _commandDispatcher.DispatchAsync(meetUp);
             return Ok($"");
+        }
+
+        [HttpGet]
+        [Route("GetAllMeetUp")]
+        public async Task<IEnumerable<Meet>> GetAllMeetUp()
+        {
+            var meets = await  _meetupRepository.BrowseAsync();
+            return meets;
+        }
+
+        [HttpGet]
+        [Route("GetMeetUpById/{id}")]
+        public async Task<Meet> GetMeetUpById(Guid id)
+        {
+            var meet = await _meetupRepository.GetMeetById(id);
+            return meet;
         }
 
         [HttpGet]

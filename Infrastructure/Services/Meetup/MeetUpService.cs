@@ -63,7 +63,7 @@ namespace PlayTogether.Infrastructure.Services.Meetup
 
             var join = new JoinToTheEvent(user.Id, meetUp.Id); 
 
-            if (meetUp.MeetMember.Contains(join))
+            if (meetUp.MeetMember.Any(x => x.UserId == userId))
             {
                 throw new ArgumentException("User actual exist in the event");
             }
